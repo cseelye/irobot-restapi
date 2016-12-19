@@ -1,0 +1,14 @@
+{
+    "robots" : {
+        "MyRoombaName" : {
+            "description" : "My roomba cleaning robot",
+            "ip" : "192.168.0.0",
+            "password" : "abCd1fGH23ikK4"
+        },
+        "MyOtherRoomba" : {
+            "description" : "My second robot",
+            "ip" : "192.168.0.0",
+            "password" : "abCd1fGH23ikK4"
+        }
+    }
+}
