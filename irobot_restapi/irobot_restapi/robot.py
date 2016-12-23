@@ -43,14 +43,6 @@ class RoombaCollection(Resource):
 
         return result
 
-@ns.route("/<string:name>")
-class Roomba(Resource):
-    """
-    Properties of a single roomba
-    """
-    def get(self, name):
-        return GetRobot(name).GetCleaningPreferences()
-
 @ns.route("/<string:name>/start")
 class RoombaStart(Resource):
     """
@@ -61,7 +53,7 @@ class RoombaStart(Resource):
         return "{}"
 
 @ns.route("/<string:name>/pause")
-class RoombaStart(Resource):
+class RoombaPause(Resource):
     """
     Pause a roomba
     """
@@ -70,7 +62,7 @@ class RoombaStart(Resource):
         return "{}"
 
 @ns.route("/<string:name>/resume")
-class RoombaStart(Resource):
+class RoombaResume(Resource):
     """
     Resume a roomba
     """
@@ -79,7 +71,7 @@ class RoombaStart(Resource):
         return "{}"
 
 @ns.route("/<string:name>/cancel")
-class RoombaStart(Resource):
+class RoombaCancel(Resource):
     """
     Cancel and return home
     """
