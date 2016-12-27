@@ -15,7 +15,7 @@ from irobot_restapi.robot import ns
 
 app = Flask(__name__)
 
-api_blueprint = Blueprint("api", __name__)
+api_blueprint = Blueprint("api", __name__, url_prefix="/api")
 flask_api.init_app(api_blueprint)
 app.register_blueprint(api_blueprint)
 
