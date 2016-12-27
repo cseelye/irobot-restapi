@@ -20,14 +20,14 @@ At this point, you can either create your own image with your files built in, or
 
     ```
     FROM cseelye/irobot-restapi
-    COPY robotconfig.json userconfig.json /irobot_restapi/
+    COPY robotconfig.json userconfig.json /app/irobot_restapi/
     ```
 
 * Or if you are running on a Raspberry Pi, use the rpi base container:
 
     ```
     FROM cseelye/rpi-irobot-restapi
-    COPY robotconfig.json userconfig.json /app/
+    COPY robotconfig.json userconfig.json /app/irobot_restapi/
     ```
 
 Build the image:  
