@@ -17,11 +17,14 @@ The easiest way to set up this API is to use the Docker container.
 At this point, you can either create your own image with your files built in, or run this image and mount your files into the correct places.
 
 * Create a Dockerfile to build your config files into the image:
+
     ```
     FROM cseelye/irobot-restapi
     COPY robotconfig.json userconfig.json /irobot_restapi/
     ```
+
 * Or if you are running on a Raspberry Pi, use the rpi base container:
+
     ```
     FROM cseelye/rpi-irobot-restapi
     COPY robotconfig.json userconfig.json /app/
