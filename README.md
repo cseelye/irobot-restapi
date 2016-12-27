@@ -1,7 +1,7 @@
 # irobot-restapi
 REST API for iRobot cleaning robots written in python and Flask.
 
-I built this API as an endpoint for an Alexa skill so that I can control my roomba via voice commands. This is basically a Docker container with a REST wrapper around my [pyirobot](https://pypi.python.org/pypi/pyirobot) module with just the action commands exposed.
+I built this API as an endpoint for an Alexa skill so that I can control my roomba via voice commands. This is basically a Docker container with a REST wrapper around my [pyirobot](https://pypi.python.org/pypi/pyirobot) module with just the action commands exposed. If you are going to expose this API to the internet, make sure you put it behind an SSL proxy!
 
 Swagger UI is available but disabled by default.  You can turn it on with an environment variable so you can easily explore and test the API. Make sure to keep it off if you connect this API to the internet!
 
