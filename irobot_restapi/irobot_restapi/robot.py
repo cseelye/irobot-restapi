@@ -50,7 +50,7 @@ class RoombaStart(Resource):
     """
     def get(self, name):
         GetRobot(name).StartCleaning()
-        return "{}"
+        return {}
 
 @ns.route("/<string:name>/pause")
 class RoombaPause(Resource):
@@ -59,7 +59,7 @@ class RoombaPause(Resource):
     """
     def get(self, name):
         GetRobot(name).PauseCleaning()
-        return "{}"
+        return {}
 
 @ns.route("/<string:name>/resume")
 class RoombaResume(Resource):
@@ -68,7 +68,7 @@ class RoombaResume(Resource):
     """
     def get(self, name):
         GetRobot(name).ResumeCleaning()
-        return "{}"
+        return {}
 
 @ns.route("/<string:name>/cancel")
 class RoombaCancel(Resource):
@@ -79,4 +79,20 @@ class RoombaCancel(Resource):
         robot = GetRobot(name)
         robot.EndCleaning()
         robot.ReturnHome()
-        return "{}"
+        return {}
+
+@ns.route("/<string:name>/status")
+class RoombaStatus(Resource):
+    """
+    Get the current status of a roomba
+    """
+    def get(self, name):
+        return GetRobot(name).GetStatus()
+
+@ns.route("/<string:name>/schedule")
+class RoombaSchedule(Resource):
+    """
+    Get the cleaning schedule of a roomba
+    """
+    def get(self, name):
+        return GetRobot(name).GetSchedule()
